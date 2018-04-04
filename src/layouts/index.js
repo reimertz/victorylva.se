@@ -8,7 +8,8 @@ import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import favicon from '../images/favicon.ico'
 
-const Template = ({ children }) => {
+const Template = ({ children, data }) => {
+    const pages = data.allContentfulPage.edges;
 
     return (
       <div>
@@ -28,7 +29,7 @@ const Template = ({ children }) => {
 
         <ThemeProvider theme={theme}>
           <div>
-            <Menu/>
+            <Menu pages={pages} />
             {children()}
             <Footer/>
           </div>
@@ -37,5 +38,18 @@ const Template = ({ children }) => {
       </div>
     )
 }
+
+export const query = graphql`
+  query allPages {
+    allContentfulPage {
+      edges {
+        node {
+          slug
+          title
+        }
+      }
+    }
+  }
+`
 
 export default Template

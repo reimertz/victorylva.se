@@ -15,17 +15,12 @@ const Nav = styled.nav`
 
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   li {
     display: inline-block;
     margin-left: 1em;
-    &:first-child {
-      position: relative;
-      margin: 0;
-      flex-basis: 100%;
-    }
   }
 
   a {
@@ -44,14 +39,18 @@ const activeLinkStyle = {
   color: 'white'
 };
 
-const Menu = () => {
+const Menu = ({pages}) => {
     return (
       <Header>
         <Nav>
           <ul>
-            <li><Link to="/" exact activeStyle={activeLinkStyle}>Home</Link></li>
-            <li><Link to="/about/" activeStyle={activeLinkStyle}>About</Link></li>
-            <li><Link to="/contact/" activeStyle={activeLinkStyle}>Contact</Link></li>
+            { 
+              pages.map((p) => {
+                const { title, slug } = p.node;
+
+                return <li key={slug}><Link to={slug} exact activeStyle={activeLinkStyle}>{title}</Link></li>
+              })
+            }
           </ul>
         </Nav>
       </Header>
