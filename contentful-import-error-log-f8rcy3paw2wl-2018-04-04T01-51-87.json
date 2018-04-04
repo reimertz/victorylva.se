@@ -1,0 +1,14 @@
+[
+  {
+    "ts": "2018-04-03T23:51:24.116Z",
+    "level": "error",
+    "error": {
+      "stacktrace": [
+        "Error: \n      Please make sure the destination space have the same default locale as the source\n\n      Default locale for source space : en-US\n\n      Default locale for destination space: sv\n\n    ",
+        "assertDefaultLocale (/Users/r/Library/Mobile Documents/com~apple~CloudDocs/_/work/victorylva/repos.nosync/gatsby-starter-gcn/node_modules/contentful-import/dist/utils/validations.js:66:11)",
+        "/Users/r/Library/Mobile Documents/com~apple~CloudDocs/_/work/victorylva/repos.nosync/gatsby-starter-gcn/node_modules/contentful-import/dist/index.js:121:46",
+        "<anonymous>"
+      ]
+    }
+  }
+]
