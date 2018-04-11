@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled, {ThemeProvider} from 'styled-components'
+import styled, {ThemeProvider, keyframes} from 'styled-components'
 import config from '../utils/siteConfig'
 import globals from '../styles/global'
 import theme from '../styles/theme'
@@ -19,6 +19,7 @@ const Template = ({ children, data }) => {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
           <link rel="icon" href={favicon} />
+          <link rel="prefetch" href="https://docs.google.com/forms/d/e/1FAIpQLSfzQrNMZYWO4UT8JJg-sV1o09bXz2meDNi_QOGrllC7R_rXyQ/viewform?embedded=true"/>
           <meta name="description" content={config.siteDescription}/>
           <meta property="og:title" content={config.siteTitle} />
           <meta property="og:locale" content="en_US" />
@@ -30,7 +31,9 @@ const Template = ({ children, data }) => {
         <ThemeProvider theme={theme}>
           <div>
             <Menu pages={pages} />
-            {children()}
+            
+              {children()}
+            
             <Footer/>
           </div>
         </ThemeProvider>
@@ -46,6 +49,7 @@ export const query = graphql`
         node {
           slug
           title
+          order
         }
       }
     }

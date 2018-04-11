@@ -1,22 +1,10 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import styled from 'styled-components'
-import config from '../utils/siteConfig'
-import CardList from '../components/CardList'
-import Card from '../components/Card'
-import Container from '../components/Container'
-import PageTitle from '../components/PageTitle'
+import { navigateTo } from "gatsby-link"
+
 
 const Index = ({data}) =>  {
-
-
-  return (
-    <Container>
-      <PageTitle>
-        Victor och Ylva
-      </PageTitle>
-    </Container>
-  )
+	navigateTo('/victor-och-ylva');
+	return false
 }
 
 export default Index

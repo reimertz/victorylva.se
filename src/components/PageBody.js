@@ -1,9 +1,22 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 require('prismjs/themes/prism.css')
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0; 
+
+  }
+  to { 
+    opacity: 1; 
+  }
+`
+
 
 const Body = styled.div`
   margin: 0 auto;
+  opacity: 0;
+  animation: ${fadeIn} 0.5s linear 250ms forwards;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
 
   h1, h2, h3 {

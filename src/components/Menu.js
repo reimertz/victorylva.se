@@ -25,18 +25,19 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: DarkGray;
+    color: white;
+    opacity: 0.5;
     font-weight: 600;
     transition: all .2s;
     border-bottom: 2px solid ${props => props.theme.colors.base};
     &:hover {
-      color: white;
+      opacity: 1;
     }
   }
 `
 
 const activeLinkStyle = {
-  color: 'white'
+  opacity: 1
 };
 
 const Menu = ({pages}) => {
@@ -45,8 +46,9 @@ const Menu = ({pages}) => {
         <Nav>
           <ul>
             { 
-              pages.map((p) => {
+              pages.sort((a,b) => a.node.order - b.node.order).map((p) => {
                 const { title, slug } = p.node;
+                console.log(p.node)
 
                 return <li key={slug}><Link to={slug} exact activeStyle={activeLinkStyle}>{title}</Link></li>
               })

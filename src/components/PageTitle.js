@@ -1,7 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0; 
+    margin-left: -10px;
+  }
+  to { 
+    opacity: 1; 
+    margin-left: 0px;
+  }
+`
 
 const Title = styled.h1`
+  animation: ${fadeIn} 250ms linear 0ms forwards;
   font-size: ${props => props.small ? '2em' : '3em'};
   text-transform: capitalize;
   font-weight: 600;

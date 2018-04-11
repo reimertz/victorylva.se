@@ -8,7 +8,7 @@
     "chalk": "^2.3.2",
     "contentful-import": "^6.2.2",
     "dotenv": "^5.0.1",
-    "gatsby": "^1.9.236",
+    "gatsby": "1.9.248",
     "gatsby-image": "^1.0.42",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-canonical-urls": "^1.0.16",
@@ -16,9 +16,9 @@
     "gatsby-plugin-react-helmet": "^2.0.8",
     "gatsby-plugin-styled-components": "^2.0.9",
     "gatsby-remark-prismjs": "^1.2.18",
-    "gatsby-source-contentful": "^1.3.44",
-    "gatsby-source-filesystem": "^1.5.27",
-    "gatsby-transformer-remark": "^1.7.37",
+    "gatsby-source-contentful": "^1.3.46",
+    "gatsby-source-filesystem": "^1.5.29",
+    "gatsby-transformer-remark": "^1.7.39",
     "inquirer": "^5.1.0",
     "lodash": "^4.17.5",
     "path": "^0.12.7",
@@ -37,7 +37,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "node ./bin/setup.js",
-    "dev": "gatsby develop"
+    "dev": "rm -rf .cache && gatsby develop"
   },
   "devDependencies": {
     "prettier": "^1.11.1"
