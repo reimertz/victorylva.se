@@ -24,7 +24,6 @@ const PageTemplate = ({data}) => {
       </Helmet>
 
       <Container>
-        <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
       </Container>
 

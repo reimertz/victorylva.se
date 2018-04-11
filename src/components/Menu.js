@@ -6,21 +6,38 @@ const Header = styled.header`
   background: ${props => props.theme.colors.base};
   width: 100%;
   padding: 1.5em 0;
+  z-index: 1337;
+  position: relative;
+
+  @media (max-width: 555px) {
+    position: fixed;
+    flex:1;
+  }
+
 `
 const Nav = styled.nav`
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
   margin: 0 auto;
-  padding: 0 1.5em;
+  
 
   ul {
     display: flex;
     justify-content: center;
+    @media (max-width: 555px) {
+      flex-direction: column;
+    }
   }
 
   li {
     display: inline-block;
     margin-left: 1em;
+    font-size: 14px;
+    @media (max-width: 555px) {
+      margin-left: 0;
+      text-align: center;
+      padding-top: 1em;
+    }
   }
 
   a {

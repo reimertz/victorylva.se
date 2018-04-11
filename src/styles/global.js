@@ -1,6 +1,24 @@
 import { injectGlobal } from 'styled-components'
 
+import Geosans from '../fonts/Geosans.ttf';
+import GeosansLight from '../fonts/GeosansLight.ttf';
+import GeosansLightOblique from '../fonts/GeosansLight-Oblique.ttf';
+
+
 injectGlobal`
+  @font-face {
+    font-family: Geosans;
+    src: url('${Geosans}') format('truetype');
+  }
+  @font-face {
+    font-family: GeosansLight;
+    src: url('${GeosansLight}') format('truetype');
+  }
+  @font-face {
+    font-family: GeosansLightOblique;
+    src: url('${GeosansLightOblique}') format('truetype');
+  }
+
   /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -60,7 +78,7 @@ injectGlobal`
 
   body {
     background: white;
-    font-size: 100%;
+    font-size: 115%;
     -webkit-text-size-adjust: 100%;
     font-variant-ligatures: none;
     -webkit-font-variant-ligatures: none;
@@ -68,13 +86,58 @@ injectGlobal`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    font-weight: 400;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 300;
+    font-family: GeosansLight, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+  h1, h2, h3 {
+    font-weight: 500;
+  }
+
+  h1 {
+    letter-spacing: 4px;
+  }
+
+  h2 {
+    letter-spacing: 5px;
+  }
+
+  h3, li {
+    letter-spacing: 3px;
   }
 
   img {
     display: block;
   	width: 100%;
   	height: auto;
+  }
+
+  #video-container {
+    height: 100%;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    left: 0;
+    top:0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  video#regular {
+    position: absolute;
+    background: transparent;
+    height: 100vh;
+    width: 100%;
+    z-index:1337;
+  }
+
+  video#blurred {
+    position: absolute;
+    width: 210vw;
+    height: auto;
+    margin-top: -15vh;
+    margin-left: -55vw;
+    z-index:1;
+    filter: blur(20px);
   }
 `;
