@@ -48,9 +48,7 @@ const Menu = ({pages}) => {
             { 
               pages.sort((a,b) => a.node.order - b.node.order).map((p) => {
                 const { title, slug } = p.node;
-                console.log(p.node)
-
-                return <li key={slug}><Link to={slug} exact activeStyle={activeLinkStyle}>{title}</Link></li>
+                return <li key={slug}><Link to={`/${slug}`} exact activeStyle={activeLinkStyle}>{title}</Link></li>
               })
             }
           </ul>
