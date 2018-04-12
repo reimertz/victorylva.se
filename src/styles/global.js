@@ -106,10 +106,19 @@ injectGlobal`
     letter-spacing: 3px;
   }
 
-  img {
-    display: block;
-  	width: 100%;
-  	height: auto;
+  img[alt="mail"], img[alt="phone"] {
+    display: inline;
+    vertical-align: middle;
+    padding: 0 0.25em;
+    height: 15px;
+    margin-top: -2px;
+  }
+
+  img[alt="mail"] {
+    display: inline;
+    padding: 0 0.25em;
+    height: 15px;
+    margin-top: -2px;
   }
 
   #video-container {

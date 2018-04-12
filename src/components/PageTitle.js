@@ -14,7 +14,7 @@ const fadeIn = keyframes`
 
 const Title = styled.h1`
   animation: ${fadeIn} 250ms linear 0ms forwards;
-  font-size: ${props => props.small ? '2em' : '3em'};
+  font-size: ${props => props.small ? '1em' : '2em'};
   text-transform: capitalize;
   font-weight: 600;
   text-align: center;

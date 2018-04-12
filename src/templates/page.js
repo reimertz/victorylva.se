@@ -24,6 +24,7 @@ const PageTemplate = ({data}) => {
       </Helmet>
 
       <Container>
+        { title === 'VICTOR OCH YLVA' ?  null : <PageTitle>{title}</PageTitle> } 
         <PageBody body={body} />
       </Container>
 
