@@ -132,9 +132,7 @@ injectGlobal`
   #video-content {
     animation: dance 1s infinite alternate ease-in-out ;
     color: white;
-    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 1.5em;
-    font-weight: 900;
     text-shadow: 0 0 20px black;
     position: absolute;
     padding: 0.25em;

@@ -44,7 +44,7 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color:${props => props.theme.colors.base};
+    color: white;
     opacity: 0.5;
     font-weight: 600;
     transition: all .2s;
@@ -55,7 +55,7 @@ const Nav = styled.nav`
   }
 `
 const MenuButton = styled.div`
-  color:${props => props.theme.colors.base};
+  color: white;
   display: none;
   font-size: 1.5em;
   font-weight: 800;
