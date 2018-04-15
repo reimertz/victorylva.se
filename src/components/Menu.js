@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const Header = styled.header`
-  background: ${props => props.theme.colors.base};
+  background: ${props => props.theme.colors.menuBG};
   width: 100%;
   padding: 1.5em 0;
   z-index: 1337;
@@ -44,19 +44,18 @@ const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    color: white;
+    color:${props => props.theme.colors.base};
     opacity: 0.5;
     font-weight: 600;
     transition: all .2s;
-    border-bottom: 2px solid ${props => props.theme.colors.base};
+    border-bottom: 2px solid ${props => props.theme.colors.menuBG};
     &:hover {
       opacity: 1;
     }
   }
 `
-
 const MenuButton = styled.div`
-  color: white;
+  color:${props => props.theme.colors.base};
   display: none;
   font-size: 1.5em;
   font-weight: 800;

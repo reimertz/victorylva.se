@@ -121,6 +121,39 @@ injectGlobal`
     margin-top: -2px;
   }
 
+  @keyframes dance {
+    from, 49% { transform-origin: -15% 100%; }
+    50%, 75%, to { transform-origin: 115% 100%; }
+    25% { transform: rotate(-2.5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(2.5deg); }
+  }
+
+  #video-content {
+    animation: dance 1s infinite alternate ease-in-out ;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-shadow: 0 0 20px black;
+    position: absolute;
+    padding: 0.25em;
+    top: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    left: 0;
+    padding-top: 70vh;
+    min-height: 30vh;
+    min-width: 100vw;
+  }
+
+  #video-content h2 {
+    text-transform: none;
+  }
+
   #video-container {
     height: 100%;
     width: 100%;
